@@ -1,0 +1,11 @@
+certifi==2021.10.8
+charset-normalizer==2.0.12
+Django==2.1.5
+django-paypal==1.1.2
+django-widget-tweaks==1.4.12
+idna==3.3
+psycopg2==2.8.6
+pytz==2021.3
+requests==2.27.1
+six==1.16.0
+urllib3==1.26.8

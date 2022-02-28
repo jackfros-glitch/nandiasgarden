@@ -1,0 +1,29 @@
+{% extends 'pizza/base.html' %}
+{% block 'body' %}
+{% load widget_tweaks %}
+<div class="container">
+
+<h1>Order Pizzas</h1>
+
+
+<h2>{{ note }}</h2>
+
+
+<form action="{% url 'pizzas' %}" method="post">
+  {% csrf_token %}
+    {{ formset.management_form }}
+
+
+    {% for form in formset %}
+    {% for field in form%}
+    {{ field.errors }}
+    {{ field.label_tag }}
+    {% render_field field class="form-control" %}
+    {% endfor %}
+    <br><br>
+    {% endfor %}
+    <input type="submit" value="Order Pizzas" />
+  </form>
+
+</div>
+{% endblock %}

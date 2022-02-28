@@ -1,0 +1,9 @@
+{% extends 'pizza/base.html' %}
+{% block 'title' %}
+ Pay Using PayPal
+{% endblock %}
+{% block 'body' %}
+<h1> Your Payment was succesful </h1>
+<p> Your Payment has been succesfully recieved </p>
+<a href="{% url 'home' %}"> back to homepage</a>
+{% endblock %}
