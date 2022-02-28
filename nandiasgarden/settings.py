@@ -27,7 +27,7 @@ SECRET_KEY = 'h=o%y!dljkkx!--^1-=)!gb*tapu1r2e9650u)1lx1l0%^f&+z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','nandiastest.herokuapp.com']
+ALLOWED_HOSTS = ['nandiastest.herokuapp.com']
 
 
 # Application definition
