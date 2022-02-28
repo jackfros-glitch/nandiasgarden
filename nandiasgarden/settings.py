@@ -86,7 +86,7 @@ DATABASES = {
         'NAME':  'nandiasdb',
         'USER': 'postgres',
         'PASSWORD': 'manasseh',
-        'HOST': '127.0.0.1',
+        'HOST': 'nandiastest.herokuapp.com',
         'PORT': '5432',
     }
 }
