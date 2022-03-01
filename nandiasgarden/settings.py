@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'nandiasgarden.wsgi.application'
 #     }
 # }
 
- DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':  'dkhi496ndqr61',
