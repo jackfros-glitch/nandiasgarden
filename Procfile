@@ -1,1 +1,1 @@
-web: gunicorn nandiasgarden.wsgi.application --log-file - 
+web: gunicorn nandiasgarden.wsgi --log-file - 
