@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import dj_database_url 
+import dj_database_url
+import django_heroku 
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -80,18 +81,29 @@ WSGI_APPLICATION = 'nandiasgarden.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME':  'nandiasdb',
+#         'USER': 'postgres',
+#         'PASSWORD': 'manasseh',
+#         'HOST': 'nandiastest.herokuapp.com',
+#         'PORT': '5432',
+#     }
+# }
+
+ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  'nandiasdb',
-        'USER': 'postgres',
-        'PASSWORD': 'manasseh',
-        'HOST': 'nandiastest.herokuapp.com',
+        'NAME':  'dkhi496ndqr61',
+        'USER': 'ckjwjcxcmfxsyg',
+        'PASSWORD': '97568f90511938f4088c9235a6092a36544b38b9a0ef290b80c6de750fe38187',
+        'HOST': 'ec2-3-224-157-224.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
 
-prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
+prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=Tru)
 DATABASES['default'].update(prod_db)
 
 # Password validation
@@ -133,6 +145,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
 
 #django paypal settings
 PAYPAL_RECIEVER_EMAIL = 'nandiasbusiness@gmail.com'
