@@ -103,7 +103,7 @@ DATABASES = {
     }
 }
 
-prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=Tru)
+prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
 DATABASES['default'].update(prod_db)
 
 # Password validation
